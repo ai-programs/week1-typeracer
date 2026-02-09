@@ -1,0 +1,87 @@
+# 🏎️ Week 1 — TypeRacer: Build a Typing Speed Game
+
+Welcome to your first project! Today you're going to build a **typing speed game** — and you're going to do it by talking to AI.
+
+You won't be writing code yourself. Instead, you'll tell Gemini (your AI assistant) what to build, test it, and ask for improvements. This is called **vibe coding** — and it's how a lot of real software gets built today.
+
+---
+
+## 🚀 Getting Started
+
+### Step 1: Open the Gemini chat
+Look for the **✨ Gemini icon** on the right side of your screen. Click it to open the chat.
+
+### Step 2: Give Gemini your first prompt
+Copy and paste this into the Gemini chat:
+
+```
+Create a typing speed game. The game should:
+- Show a random sentence that I need to type
+- Have an input box where I type
+- Have a Start button
+- Show a timer while I'm typing
+- When I finish, show my time, words per minute, and accuracy
+- Have a Play Again button
+- Look cool and colorful — I'm a teenager, make it fun!
+
+Put the HTML in index.html, the CSS in style.css, and the JavaScript in main.js.
+```
+
+### Step 3: Check the preview
+Look at the **preview panel** on the right — your game should appear there! If not, wait a few seconds for it to load.
+
+### Step 4: Test it!
+Play your game. Does it work? Is there anything you'd change?
+
+---
+
+## 🔄 Make It Yours
+
+Now comes the fun part — **iterate!** Ask Gemini to change things. Here are some ideas:
+
+- "Make the background dark with neon colors"
+- "Add a countdown before the game starts — 3, 2, 1, GO!"
+- "Show confetti when I finish"
+- "Add difficulty levels — easy, medium, hard"
+- "Make it play a sound when I finish"
+- "Add a high score that saves my best time"
+- "Show which words I got wrong in red"
+
+**Pro tip:** The more specific your prompt, the better the result. Instead of "make it look better", try "change the font to something modern, make the buttons rounded with a gradient, and add a subtle shadow".
+
+---
+
+## 🧠 What You're Learning
+
+Without even realizing it, you're working with:
+
+| Technology | What it does | Analogy |
+|---|---|---|
+| **HTML** | Structure of the page | The skeleton 🦴 |
+| **CSS** | How it looks | The clothes 👕 |
+| **JavaScript** | How it behaves | The brain 🧠 |
+
+Every time you ask Gemini to "add a button" — that's HTML.
+Every time you say "make it blue" — that's CSS.
+Every time you say "start a timer when I click" — that's JavaScript.
+
+---
+
+## 📁 Your Files
+
+| File | What's inside |
+|---|---|
+| `index.html` | The structure of your game |
+| `style.css` | The visual design |
+| `main.js` | The game logic |
+
+---
+
+## 💡 Tips
+
+- **Don't be afraid to break things.** You can always ask Gemini to fix it.
+- **Be specific.** "Add a timer" works. "Add a countdown timer that shows seconds and turns red in the last 5 seconds" works way better.
+- **Experiment!** Try weird things. Ask for animations, sounds, themes. See what happens.
+- **If something doesn't work**, tell Gemini exactly what went wrong: "When I click Start, nothing happens" is much better than "it's broken".
+
+Have fun! 🎮
