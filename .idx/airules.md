@@ -44,7 +44,9 @@ Students do NOT need to memorize syntax or write code from scratch. They need to
 
 ### ✅ ONLY USE:
 - **Vanilla JavaScript** (ES6+) - no frameworks ever
-- **Plain HTML5** and **Plain CSS3**
+- **Plain HTML5**
+- **Tailwind CSS** (via CDN `<script src="https://cdn.tailwindcss.com"></script>`) — preferred for styling
+- Plain CSS3 in `style.css` is fine for things Tailwind doesn't cover
 - **Maximum 3 files:** `index.html`, `style.css`, `main.js`
 - Code must work by simply opening `index.html` in a browser
 
@@ -52,7 +54,7 @@ Students do NOT need to memorize syntax or write code from scratch. They need to
 - React, Vue, Angular, Next.js, Svelte, or ANY JavaScript framework
 - TypeScript
 - Build tools (Webpack, Vite, Parcel, Rollup, etc)
-- CSS frameworks (Tailwind, Bootstrap, Material UI, etc)
+- CSS frameworks other than Tailwind (Bootstrap, Material UI, etc)
 - Package managers or npm packages (unless absolutely critical)
 - Node.js or any backend/server code
 
@@ -104,25 +106,24 @@ startButton.addEventListener('click', startGame);
 // Functions are like recipes - a set of instructions we can use over and over
 // This function runs when the Start button is clicked
 function startGame() {
-  // Pick a random sentence from our array
-  currentSentence = getRandomSentence();
+  // Pick a random challenge from our array
+  currentChallenge = getRandomChallenge();
 
   // Display it on the screen (changing the HTML)
-  sentenceDisplay.textContent = currentSentence;
+  challengeDisplay.textContent = currentChallenge;
 
-  // Record when we started (we'll use this to calculate speed)
+  // Record when we started (we'll use this to calculate results)
   startTime = Date.now();  // Date.now() gives current time in milliseconds
 }
 
 // ==============================================
-// CALCULATION - Words Per Minute (WPM)
+// CALCULATION - Computing the final score
 // ==============================================
-// WPM measures typing speed: (characters ÷ 5) ÷ minutes
-// We divide by 5 because the average English word is 5 characters
-function calculateWPM(characters, seconds) {
-  const minutes = seconds / 60;           // Convert seconds to minutes
-  const words = characters / 5;           // Convert characters to "words"
-  return Math.round(words / minutes);     // Round to whole number
+// The score is based on points earned and how fast the player finished
+// We give a time bonus for completing quickly
+function calculateScore(points, seconds) {
+  const timeBonus = Math.max(0, 60 - seconds);  // Bonus for finishing faster
+  return Math.round(points + timeBonus);         // Round to whole number
 }
 
 ❌ BAD COMMENTS - Too brief, not educational:
@@ -147,24 +148,24 @@ function calculateWPM(c, s) { return (c/5)/(s/60); }
 ```javascript
 ✅ PREFER - Reads like English, self-documenting:
 
-// "For each sentence, show it in the console"
-sentences.forEach(sentence => {
-  console.log(sentence);
+// "For each item, show it in the console"
+items.forEach(item => {
+  console.log(item);
 });
 
-// "Keep only sentences longer than 20 characters"
-const longSentences = sentences.filter(sentence => sentence.length > 20);
+// "Keep only items longer than 5 characters"
+const longItems = items.filter(item => item.length > 5);
 
-// "Transform each sentence to UPPERCASE"
-const upperSentences = sentences.map(sentence => sentence.toUpperCase());
+// "Transform each item to UPPERCASE"
+const upperItems = items.map(item => item.toUpperCase());
 
-// "Find the sentence that includes 'hello'"
-const found = sentences.find(sentence => sentence.includes('hello'));
+// "Find the item that includes 'hello'"
+const found = items.find(item => item.includes('hello'));
 
 // Chaining is fine when it makes sense (with good comments!):
-const result = sentences
-  .filter(s => s.length > 20)      // Step 1: Keep only long sentences
-  .map(s => s.toLowerCase())       // Step 2: Convert to lowercase
+const result = items
+  .filter(i => i.length > 5)       // Step 1: Keep only long items
+  .map(i => i.toLowerCase())       // Step 2: Convert to lowercase
   .slice(0, 5);                    // Step 3: Take first 5
 
 ⚠️ USE SPARINGLY - Classic for loops (only when you specifically need the index):
@@ -196,7 +197,7 @@ let score = 0;
 const maxScore = 100;
 let playerName = "User";
 let isPlaying = false;
-const sentences = ["hello", "world"];
+const items = ["apple", "banana", "orange"];
 
 // ARRAYS - Creating and using
 const items = ["apple", "banana", "orange"];

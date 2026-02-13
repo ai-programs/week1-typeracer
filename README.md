@@ -12,20 +12,7 @@ You won't be writing code yourself. Instead, you'll tell Gemini (your AI assista
 Look for the **✨ Gemini icon** on the right side of your screen. Click it to open the chat.
 
 ### Step 2: Give Gemini your first prompt
-Copy and paste this into the Gemini chat:
-
-```
-Create a typing speed game. The game should:
-- Show a random sentence that I need to type
-- Have an input box where I type
-- Have a Start button
-- Show a timer while I'm typing
-- When I finish, show my time, words per minute, and accuracy
-- Have a Play Again button
-- Look cool and colorful — I'm a teenager, make it fun!
-
-Put the HTML in index.html, the CSS in style.css, and the JavaScript in main.js.
-```
+Based on the requirements given, describe the game you want to build in your own words. The more specific you are, the better the result!
 
 ### Step 3: Check the preview
 Look at the **preview panel** on the right — your game should appear there! If not, wait a few seconds for it to load.
