@@ -32,11 +32,6 @@
         default.openFiles = [ "README.md" ];
       };
       onStart = {};
-      settings = {
-        "files.exclude" = {
-          "**/.*" = true;
-        };
-      };
     };
   };
 }
