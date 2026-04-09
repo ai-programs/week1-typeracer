@@ -1,0 +1,19 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {},
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "saoudrizwan.claude-dev"
+      ],
+      "settings": {
+        "chat.disableAIFeatures": true,
+        "files.exclude": {
+          ".clinerules": true,
+          ".git": true,
+          ".gitignore": true
+        }
+      }
+    }
+  }
+}
