@@ -1,8 +1,6 @@
 {
-   "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
-  "features": {
-    "ghcr.io/devcontainers/features/python:1": {}
-  },
+  "name": "Week 1 – TypeRacer",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -11,11 +9,12 @@
       "settings": {
         "chat.disableAIFeatures": true,
         "files.exclude": {
-          ".clinerules": true,
-          ".git": true,
-          ".gitignore": true
+          "**/.clinerules": true,
+          "**/.git": true,
+          "**/.gitignore": true
         }
       }
     }
-  }
+  },
+  "postCreateCommand": "curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - && sudo apt-get install -y nodejs python3"
 }
